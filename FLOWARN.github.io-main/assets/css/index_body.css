@@ -1,0 +1,183 @@
+.section-title {
+    border-bottom: 3px solid #000000;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.container {
+    width: 80%; /* Check if this is limiting width */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* This spreads sections out */
+}
+.col-12 {
+    width: 100%; /* This should make it full width */
+    padding: 0 15px; /* Check if padding is different in other sections */
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background: #fff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.check-list, .quote-list, .collaborators-list {
+    list-style: none;
+    padding: 0;
+}
+
+.check-list li, .quote-list li {
+    padding: 8px 0;
+    font-size: 16px;
+}
+
+.check-list li::before {
+    
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.collaborators-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.collaborators-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.collaborators-list img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.collaborators-list img:hover {
+    transform: scale(1.1);
+}
+
+.quote-list li {
+    text-align: center;
+    padding: 15px;
+}
+
+.quote-list img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.quote-list p {
+    font-style: italic;
+    color: #555;
+}
+.section-title {
+    border-bottom: 3px solid #000000;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background: #fff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.check-list, .quote-list, .collaborators-list {
+    list-style: none;
+    padding: 0;
+}
+
+.check-list li {
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Logos in a Row */
+.logos-container {
+    display: flex;
+    justify-content: center; /* Centering the logos */
+    align-items: center;
+    gap: 30px; /* Spacing between logos */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.logos-container img {
+    height: 60px; /* Adjust height */
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logos-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Collaborators Section */
+.collaborators-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.collaborators-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.collaborators-list img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.collaborators-list img:hover {
+    transform: scale(1.1);
+}
+
+/* Partners Section */
+.quote-list li {
+    text-align: center;
+    padding: 15px;
+}
+
+.quote-list img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.quote-list p {
+    font-style: italic;
+    color: #555;
+}

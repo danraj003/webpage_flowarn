@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	
+	<div class="content-wrapper"></div>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="images/flowarnlogo1.png" type="image/png">
+	
+    <title>FLOWARN-WA</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+</head>
+<body class="subpage">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+        <!-- Header -->
+			<section id="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<header id="top-logo" style="background-color: black">
+								<div style="display: flex; align-items: center; justify-content: space-between;">
+									<!-- Logo -->
+								<a href="index.html" style="display: flex; align-items: center; margin-top: 20px;">
+									<img src="images/flowarn.png" alt="FLOWARN Logo" style="height: 90px; margin: 0; padding: 0;">
+								</a>
+			
+									<!-- Nav -->
+								<nav id="nav" style="display: flex; ">
+									<a href="index.html" class="nav-link">Home</a>
+									<a href="team.html" class="nav-link">Team</a>
+									<a href="flood.html" class="nav-link">Flood Forecasting</a>
+									<a href="project.html" class="nav-link">Project Outcomes</a>
+									<a href="training.html" class="nav-link">Training</a>
+								</nav>
+								</div>
+							</header>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!-- CSS for hover effect -->
+			<style>
+				.nav-link {
+					font-weight: bold;
+					color: rgb(237, 227, 227);
+					text-decoration: none;
+					transition: color 0.3s, background-color 0.3s, border-radius 0.3s;
+					padding: 5px 10px;
+				}
+			
+				.nav-link:hover {
+					text-decoration: underline; /* Adds underline on hover */
+					color: #FFD700; /* Change text color to gold for better visibility */
+				}
+			
+				#top-logo {
+					box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for better visibility */
+				}
+			</style>
+
+			</header>
+				<section id="content">
+					<div class="container" style="text-align: float: left; ">
+						<h1 style="
+							line-height: 1.5;
+							font-family: 'Times New Roman', sans-serif;
+							font-size: 3rem;
+							color: #333;
+							
+							text-align: center; /* Centers horizontally */
+							display: flex;      /* Flex container for vertical centering */
+							justify-content: center; /* Center horizontally */
+							align-items: center; /* Center vertically */
+							font-weight: bold;
+								
+						">
+							Flash Flood Nowcasting for 
+							Warning Systems - West Africa
+						</h1>
+					</div>
+				</section>
+
+				<!--For the photos section-->
+				<section id="banner">
+					<div class="container">
+						<div class="row">
+							<div class="col-12" ">
+								<!-- Carousel Container -->
+								<div id="imageCarousel" class="carousel">
+									<!-- Slides -->
+									<div class="carousel-track">
+										<div class="carousel-slide">
+											<img src="images/2.jpg" alt="Image 1" style="width: 100%; border-radius: 0px;">
+											<div class="carousel-label">Flood Event in G</div>
+										</div>
+										<div class="carousel-slide">
+											<img src="images/4.jpg" alt="Image 2" style="width: 100%; border-radius: 0px;">
+											<div class="carousel-label">Label for Image 2</div>
+										</div>
+										<div class="carousel-slide">
+											<img src="images/5.jpg" alt="Image 3" style="width: 100%; border-radius: 0px;">
+											<div class="carousel-label">Label for Image 3</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<!-- CSS for styling -->
+				<style>
+					#imageCarousel {
+						overflow: hidden;
+						position: relative;
+						width: 100%;
+					}
+				
+					.carousel-track {
+						display: flex;
+						transition: transform 0.5s ease-in-out;
+					}
+				
+					.carousel-slide {
+						min-width: 100%;
+						position: relative;
+						text-align: center;
+					}
+				
+					.carousel-label {
+						position: absolute;
+						bottom: 20px;
+						left: 50%;
+						transform: translateX(-50%);
+						background-color: blue (0, 0, 0, 0.7);
+						color: white;
+						padding: 0px 0px;
+						border-radius: 0px;
+						font-size: 1.2rem;
+					}
+				</style>
+				
+				<!-- JavaScript for Carousel functionality -->
+				<script>
+					let currentIndex = 0;
+					const track = document.querySelector('.carousel-track');
+					const slides = document.querySelectorAll('.carousel-slide');
+				
+					function moveToSlide(index) {
+						const slideWidth = slides[0].getBoundingClientRect().width;
+						track.style.transform = `translateX(-${index * slideWidth}px)`;
+					}
+				
+					function nextSlide() {
+						currentIndex = (currentIndex + 1) % slides.length;
+						moveToSlide(currentIndex);
+					}
+				
+					// Initialize the carousel
+					moveToSlide(currentIndex);
+					setInterval(nextSlide, 3000); // Change image every 3 seconds
+				</script>
+				
+				
+
+				<!-- Content Section -->
+				<section id="content" class="container">
+					<div class="row" style="display: flex; justify-content: space-between; gap: 20px;">
+						<div class="col-12 col-12-medium"> 
+							<section>
+								
+								<h3 style="font-size: 20px;">Flowarn-WA is a multi-institutional effort headed by Rutgers University and funded by the National Aeronautics and Space Administration (NASA) via its SERVIR: <a href="https://www.nasa.gov/servir/about-servir/">https://www.nasa.gov/servir/about-servir/</a> program for the period March 2022 through February 2025.</h3>
+								<br>
+								<h3 style="font-size: 20px;">The effort's main goal is to enable reliable machine learning-based flash flood forecasting for the West African region based on satellite observations. We aspire for the envisioned system to significantly advance the institutional capacity of the West Africa (WA) SERVIR Hub and their users to mitigate flash flood risks.</h3>
+								<br>
+								<h3 style="font-size: 20px;">The project is led by Dr. Efthymios Nikolopoulos of Rutgers University and supported by teams at George Mason University, University of Iowa and Florida Institute of Technology as well as by domain expert Dr. Jonathan J. Gourley, a Research Hydrometeorologist with the NOAA/National Severe Storms Laboratory and an Affiliate Associate Professor with the School of Meteorology and Civil Engineering departments at the University of Oklahoma.</h3>
+							</section>
+						</div>
+						<!-- Collaborators Section -->
+						<div class="col-4 col-12-medium">
+							<section>
+								<h2 style="border-bottom: 3px solid #000000; display: inline-block; margin-bottom: 20px;">Collaborators</h2>
+								<ul class="quote-list">
+									<li>
+										<img src="images/Rutgers.png" alt="Rutgers" style="height: 50px;">
+										<p>Rutgers University</p>
+									</li>
+									<li>
+										<img src="images/Florida_Institute_of_Technology.jpg" alt="FIT" style="height: 50px;">
+										<p>Florida Institute of Technology</p>
+									</li>
+									<li>
+										<img src="images/gmu.jpeg" alt="GMU" style="height: 50px;">
+										<p>George Mason University</p>
+									</li>
+									<li>
+										<img src="images/University_of_Iowa_seal.jpeg" alt="IOWA" style="height: 50px;">
+										<p>The University of Iowa</p>
+									</li>
+									<li>
+										<img src="images/NOAA.jpeg" alt="NOAA" style="height: 50px;">
+										<p>NOAA</p>
+									</li>
+								</ul>
+							</section>
+						</div>
+						<!-- Announcements Section -->
+						<div class="col-4 col-6-medium col-12-small">
+							<section>
+								<h2 style="border-bottom: 3px solid #000000; display: inline-block; margin-bottom: 20px;">Announcements</h2>
+								<ul class="check-list">
+									<li>
+										Develop a reliable flash flood forecasting system for West Africa integrating satellite data, machine learning models, and local insights.
+									</li>
+									<li>
+										Deploy a working prototype that can transition into an operational environment for the West African region.
+									</li>
+									<li>
+										Strengthen the technical capacity of West African institutions to manage flood-related risks through specialized training programs.
+									</li>
+								</ul>
+							</section>
+						</div>
+
+						<!-- Objectives Section -->
+						<div class="col-4 col-6-medium col-12-small">
+							<section>
+								<h2 style="border-bottom: 3px solid #000000; display: inline-block; margin-bottom: 20px;">Objectives</h2>
+								<ul class="check-list">
+									<li>
+										Develop a reliable flash flood forecasting system for West Africa integrating satellite data, machine learning models, and local insights.
+									</li>
+									<li>
+										Deploy a working prototype that can transition into an operational environment for the West African region.
+									</li>
+									<li>
+										Strengthen the technical capacity of West African institutions to manage flood-related risks through specialized training programs.
+									</li>
+								</ul>
+							</section>
+						</div>
+						
+						<!-- Partners Section -->
+						<div class="col-4 col-6-medium col-12-small">
+							<section>
+								<h2 style="border-bottom: 3px solid #000000; display: inline-block; margin-bottom: 20px;">Partners</h2>
+								<ul class="quote-list">
+									<li>
+										<img src="images/pic06.jpg" alt="" />
+										<p>"Neque nisidapibus mattis"</p>
+										<span>Jane Doe, CEO of UntitledCorp</span>
+									</li>
+									<li>
+										<img src="images/pic07.jpg" alt="" />
+										<p>"Lorem ipsum consequat!"</p>
+										<span>John Doe, President of FakeBiz</span>
+									</li>
+									<li>
+										<img src="images/pic08.jpg" alt="" />
+										<p>"Magna veroeros amet tempus"</p>
+										<span>Mary Smith, CFO of UntitledBiz</span>
+									</li>
+								</ul>
+							</section>
+						</div>
+						<!-- Contact Section -->
+						<div class="col-4 col-6-medium col-12-small">
+							<section>
+								<h2 style="border-bottom: 3px solid #000000; display: inline-block; margin-bottom: 20px;">Contact Us</h2>
+								<p>
+									<strong>Efthymios Nikolopoulos</strong><br>
+									Principal Investigator, Rutgers University<br>
+									<a href="mailto:efthymios.nikolopoulos@rutgers.edu" style="color: #007BFF;">efthymios.nikolopoulos@rutgers.edu</a>
+								</p>
+								<p>
+									<strong>Phone:</strong> +1-848-445-9338<br>
+									<strong>Address:</strong> Richard Weeks Hall of Engineering
+									500 Bartholomew Road, Room 328A
+									Piscataway, NJ 08854
+								</p>
+							</section>
+						</div>
+					</div>
+				</section>
+
+
+			<!-- Copyright -->
+				<div id="copyright">
+					&copy; Flowarn 2024. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

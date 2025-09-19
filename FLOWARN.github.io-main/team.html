@@ -1,0 +1,617 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="images/flowarnlogo1.png" type="image/png">
+    <title>FLOWARN-WA</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Modal Styles */
+        /* Container or main content */
+        .blur {
+            filter: blur(5px);
+            transition: filter 0.3s ease-in-out;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background-color: rgba(0, 0, 0, 0.5); /* Black transparent background */
+            overflow: auto; /* Enable scrolling for long content */
+        }
+
+        .modal-content {
+            position: relative;
+            margin: 10% auto;
+            padding: 20px;
+            background: white;
+            width: 30%;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Display modal */
+        .modal.show {
+            display: block;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .profile img {
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .profile img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="subpage">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+        <!-- Header -->
+			<section id="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<header id="top-logo" style="background-color: rgb(0, 0, 0)">
+								<div style="display: flex; align-items: center; justify-content: space-between;">
+									<!-- Logo -->
+								<a href="index.html" style="display: flex; align-items: center; margin-top: 20px;">
+									<img src="images/flowarn.png" alt="FLOWARN Logo" style="height: 90px; margin: 0; padding: 0;">
+								</a>
+			
+									<!-- Nav -->
+								<nav id="nav" style="display: flex; ">
+									<a href="index.html" class="nav-link">Home</a>
+									<a href="team.html" class="nav-link">Team</a>
+									<a href="flood.html" class="nav-link">Flood Forecasting</a>
+									<a href="project.html" class="nav-link">Project Outcomes</a>
+									<a href="training.html" class="nav-link">Training</a>
+								</nav>
+								</div>
+							</header>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!-- CSS for hover effect -->
+			<style>
+				.nav-link {
+					font-weight: bold;
+					color: rgb(237, 227, 227);
+					text-decoration: none;
+					transition: color 0.3s, background-color 0.3s, border-radius 0.3s;
+					padding: 5px 10px;
+				}
+			
+				.nav-link:hover {
+					text-decoration: underline; /* Adds underline on hover */
+					color: #FFD700; /* Change text color to gold for better visibility */
+				}
+			
+				#top-logo {
+					box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for better visibility */
+				}
+			</style>
+        
+    
+        
+
+        <!-- Main Content -->
+        <main id="content" class="container" style="background-color: white;">
+            <!-- Meet Our Team Heading -->
+            <h1 style="
+                font-family: 'Times New Roman', sans-serif;
+                font-size: 2.5rem;
+                color: #333;
+                margin-bottom: 30px;
+                text-align: center; /* Centers horizontally */
+                display: flex;      /* Flex container for vertical centering */
+                justify-content: center; /* Center horizontally */
+                align-items: center; /* Center vertically */
+                font-weight: bold;
+                       
+            ">
+             Meet Our Team
+            </h1>
+
+            
+            <!-- Team Section -->
+            <section id="team" class="row">
+
+                <!-- Team Member Template -->
+                <article class="col-4 col-12-medium">
+                    <section>
+                        <header>
+                            <h2 style="font-family: 'Times New Roman', sans-serif; font-size: 1.5rem; font-weight: bold;color: #333;">Efthymios Nikolopoulos</h2>
+                        </header>
+                        <div class="profile">
+                            <img src="images/Thymios_profile_picture.jpg" alt="Efthymios Nikolopoulos" height="250" 
+                                 onclick="openModal('modal-thymios')">
+                        </div>
+                        <p>
+                            <div style="display: flex; gap: 20px; align-items: center;">
+                                
+                                <!-- Website Logo -->
+                                <a href="https://www.hydrores.com/" target="_blank">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/74/74842.png" alt="Website" style="width: 30px; height: 30px;">
+                                </a>
+                                <!-- Email Logo -->
+                                <a href="mailto:efthymios.nikolopoulos@rutgers.edu">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" alt="Email" style="width: 30px; height: 30px;">
+                                </a>
+                            </div>
+                        </p>
+                    </section>
+                </article>
+
+                <article class="col-4 col-12-medium">
+                    <section>
+                        <header>
+                            <h2 style="font-family: 'Times New Roman', sans-serif; font-size: 1.5rem; font-weight: bold; color: #333;"> Georgios Anagnostopoulos</h2>
+                        </header>
+                        <div class="profile">
+                            <img src="images/georgios.jpg" height="250" onclick="openModal('modal-georgios')" />
+                        </div>
+                        <p>
+                            <div style="display: flex; gap: 20px; align-items: center;">
+                                
+                                <!-- Website Logo -->
+                                <a href="https://www.fit.edu/faculty-profiles/a/anagnostopoulos-georgios/" target="_blank">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/74/74842.png" alt="Website" style="width: 30px; height: 30px;">
+                                </a>
+                                <!-- Email Logo -->
+                                <a href="mailto:mailto:georgio@fit.edu">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" alt="Email" style="width: 30px; height: 30px;">
+                                </a>
+                            </div>
+                            
+                        </p>
+                    </section>
+                </article> 
+
+                <article class="col-4 col-12-medium">
+                    <section>
+                        <header>
+                            <h2 style="font-family: 'Times New Roman', sans-serif; font-size: 1.5rem; font-weight: bold; color: #333;">Humberto Vergara</h2>
+                        </header>
+                        <div class="profile">
+                            <img src="images/VergaraH.jpeg" height="250" onclick="openModal('modal-humberto')" />
+                        </div>
+                        <p>
+                            <div style="display: flex; gap: 20px; align-items: center;">
+                                <!-- Website Logo -->
+                                <a href="https://engineering.uiowa.edu/directory/humberto-vergara" target="_blank">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/74/74842.png" alt="Website" style="width: 30px; height: 30px;">
+                                </a>
+                                
+                                <!-- Email Logo -->
+                                <a href="mailto:vergaraarrieta@uiowa.edu">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" alt="Email" style="width: 30px; height: 30px;">
+                                </a>
+                            </div>
+                            
+                        </p>
+                    </section>
+                </article> 
+
+                <article class="col-4 col-12-medium">
+                    <section>
+                        <header>
+                            <h2 style="font-family: 'Times New Roman', sans-serif; font-size: 1.5rem; font-weight: bold; color: #333;">Viviana Maggioni</h2>
+                        </header>
+                        <div class="profile">
+                            <img src="images/V_Maggioni_satellite1.jpg" height="250" onclick="openModal('modal-viviana')" />
+                        </div>
+                        <p>
+                            <div style="display: flex; gap: 20px; align-items: center;">
+                                <!-- Website Logo -->
+                                <a href="https://maggioni.vse.gmu.edu" target="_blank">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/74/74842.png" alt="Website" style="width: 30px; height: 30px;">
+                                </a>
+                                
+                                <!-- Email Logo -->
+                                <a href="mailto:vmaggion@gmu.edu">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" alt="Email" style="width: 30px; height: 30px;">
+                                </a>
+                            </div>
+                            
+                        </p>
+                    </section>
+                </article>
+
+                <article class="col-4 col-12-medium">
+                    <section>
+                        <header>
+                            <h2 style="font-family: 'Times New Roman', sans-serif; font-size: 1.5rem; font-weight: bold; color: #333;">Jonathan J. Gourley</h2>
+                        </header>
+                        <div class="profile">
+                            <img src="images/JJ_Gourley.jpeg" height="250" onclick="openModal('modal-jj')" />
+                        </div>
+                        <p>
+                            <div style="display: flex; gap: 20px; align-items: center;">
+                                <!-- Website Logo -->
+                                <a href="https://hydros.ou.edu/people/jj-gourley/" target="_blank">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/74/74842.png" alt="Website" style="width: 30px; height: 30px;">
+                                </a>
+                                
+                                <!-- Email Logo -->
+                                <a href="mailto:jj.gourley@noaa.gov">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" alt="Email" style="width: 30px; height: 30px;">
+                                </a>
+                            </div>
+                            
+                        </p>
+                    </section>
+                </article> 
+
+                <article class="col-4 col-12-medium">
+                    <section>
+                        <header>
+                            <h2 style="font-family: 'Times New Roman', sans-serif; font-size: 1.5rem; font-weight: bold; color: #333;">Akshay Aravamudan</h2>
+                        </header>
+                        <div class="profile">
+                            <img src="images/akshay.jpg" height="250" onclick="openModal('modal-akshay')" />
+                        </div>
+                        <p>
+                            <div style="display: flex; gap: 20px; align-items: center;">
+                                <!-- GitHub Logo -->
+                                <a href="https://aaravamudan2014.github.io/Akshay-Aravamudan/" target="_blank">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="GitHub" style="width: 30px; height: 30px;">
+                                </a>
+                                <!-- Website Logo -->
+                                <a href="https://gio-research.ai/author/akshay-aravamudan/" target="_blank">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/74/74842.png" alt="Website" style="width: 30px; height: 30px;">
+                                </a>
+                                <!-- Email Logo -->
+                                <a href="mailto:aaravamudan2014@my.fit.edu">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" alt="Email" style="width: 30px; height: 30px;">
+                                </a>
+                            </div>
+                            
+                            
+                        </p>
+                    </section>
+                </article>                
+                
+                
+
+                
+                
+                
+
+                <article class="col-4 col-12-medium">
+                    <section>
+                        <header>
+                            <h2 style="font-family: 'Times New Roman', sans-serif; font-size: 1.5rem; font-weight: bold; color: #333;">Malihe Nasibi</h2>
+                        </header>
+                        <div class="profile">
+                            <img src="images/Malihe.jpg" height="250" onclick="openModal('modal-malihe')" />
+                        </div>
+                        <p>
+                            <div style="display: flex; gap: 20px; align-items: center;">
+                                
+                            </div>
+                            
+                        </p>
+                    </section>
+                </article> 
+            
+                <article class="col-4 col-12-medium">
+                    <section>
+                        <header>
+                            <h2 style="font-family: 'Times New Roman', sans-serif; font-size: 1.5rem; font-weight: bold; color: #333;">Vanessa Robledo</h2>
+                        </header>
+                        <div class="profile">
+                            <img src="images/Robledo_V_Picture.jpg" height="250" onclick="openModal('modal-vanessa')" />
+                        </div>
+                        <p>
+                            <div style="display: flex; gap: 20px; align-items: center;">
+                                
+                            </div>
+                            
+                        </p>
+                    </section>
+                </article>
+            
+        
+                
+            
+                <article class="col-4 col-12-medium">
+                    <section>
+                        <header>
+                            <h2 style="font-family: 'Times New Roman', sans-serif; font-size: 1.5rem; font-weight: bold; color: #333;">Xi Zhnag</h2>
+                        </header>
+                        <div class="profile">
+                            <img src="images/xi.jpg" height="250" onclick="openModal('modal-xi')" />
+                        </div>
+                        <p>
+                            <div style="display: flex; gap: 20px; align-items: center;">
+                                
+                            </div>
+                            
+                        </p>
+                    </section>
+                </article>  
+
+                <article class="col-4 col-12-medium">
+                    <section>
+                        <header>
+                            <h2 style="font-family: 'Times New Roman', sans-serif; font-size: 1.5rem; font-weight: bold; color: #333;">Ankita Kukrety </h2>
+                        </header>
+                        <div class="profile">
+                            <img src="images/Ankita.jpg" height="250" onclick="openModal('modal-ankita')" />
+                        </div>
+                        <p>
+                            <div style="display: flex; gap: 20px; align-items: center;"></div>
+                            <!-- Email Logo -->
+                            <a href="mailto:ak2224@rutgers.edu">
+                                <img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" alt="Email" style="width: 30px; height: 30px;">
+                            </a>
+                            
+                        </p>
+                    </section>
+                </article> 
+                
+
+                
+                 
+                <article class="col-4 col-12-medium">
+                    <section>
+                        <header>
+                            <h2 style="font-family: 'Times New Roman', sans-serif; font-size: 1.5rem; font-weight: bold; color: #333;">Gonzalo Buitrago</h2>
+                        </header>
+                        <div class="profile">
+                            <img src="images/Gonzalo.jpg" height="250" onclick="openModal('modal-gonzalo')" />
+                        </div>
+                        <p>
+                            <div style="display: flex; gap: 20px; align-items: center;">
+                                
+                                
+                                <!-- Email Logo -->
+                                <a href="mailto:forerobuitrago@uiowa.edu">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" alt="Email" style="width: 30px; height: 30px;">
+                                </a>
+                            </div>
+                            
+                        </p>
+                    </section>
+                </article> 
+        </main>
+
+        <!-- Modals -->
+        <!-- Modal for Thymios -->
+        <div id="modal-thymios" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-thymios')">&times;</span>
+                <h2>Efthymios Nikolopoulos (PI)</h2>
+                <img src="images/Thymios_profile_picture.jpg" alt="Efthymios Nikolopoulos" height="250">
+                <p>
+                    Dr. Efthymios (Thymios) Nikolopoulos is Associate Professor of Civil and Environmental Engineering at Rutgers University – New Brunswick. His expertise is in hydrometeorological extremes and integrating remote sensing observations with predictive models. Thymios coordinates flash flood forecasting and capacity building in West Africa.
+                </p>
+                
+            </div>
+        </div>
+
+        <!-- Modal for Akshay -->
+        <div id="modal-akshay" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-akshay')">&times;</span>
+                <h2>Akshay Aravamudan</h2>
+                <img src="images/akshay.jpg" alt="Akshay Aravamudan" height="250">
+                <p>
+                    Akshay Aravamudan is a doctoral student majoring in computer engineering at Florida Institute of Technology. His research areas include machine learning, stochastic point processes, and hydrology.
+                </p>
+                
+            </div>
+        </div>
+
+        <div id="modal-ankita" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-ankita')">&times;</span>
+                <h2>Ankita Kukrety</h2>
+                <img src="images/Ankita.jpg" alt="Ankita Kukrety" height="250">
+                <p>
+                    Ankita Kukrety is a graduate student with a Master’s degree in Information Technology & Analytics from Rutgers University. Her research areas of interest include machine learning, data visualization and web technologies. Her ongoing research endeavors center around the development of advanced data visualization techniques tailored for enhancing flood forecasting capabilities in the West African region. She is responsible for the design and implementation of the project’s website from inception to deployment. Leveraging her expertise in HTML, CSS, and JavaScript, she crafted interactive and intuitive features, thereby elevating the overall user experience.
+                </p>
+                
+            </div>
+        </div>
+        <div id="modal-georgios" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-georgios')">&times;</span>
+                <h2>Dr. Georgios C. Anagnostopoulos</h2>
+                <img src="images/georgios.jpg" alt="Ankita Kukrety" height="250">
+                <p>
+                    Dr. Georgios C. Anagnostopoulos is an Associate Professor of Electrical & Computer Engineering at the Florida Institute of Technology in Melbourne, Florida, USA. He received his Electrical Engineering Diploma (1994) from University of Patras, Greece, and his M.Sc. (1997) and Ph.D. (2001) degrees in Electrical Engineering from the University of Central Florida, USA. His areas of expertise are machine learning (its theory and applications) and modelling and he has significant background in optimization and signal processing. Georgios is leading the precipitation intensity nowcasting component of this effort.
+                </p>
+                
+            </div>
+        </div>
+
+        </div>
+        <div id="modal-gonzalo" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-gonzalo')">&times;</span>
+                <h2>Gonzalo Alberto Forero Buitrago</h2>
+                <img src="images/Gonzalo.jpg" alt="Gonzalo Alberto Forero Buitrago" height="250">
+                <p>
+                    Gonzalo Alberto Forero Buitrago is a PhD Student and Graduate Research Assistant at IIHR—Hydroscience & Engineering, Maxwell Stanley Hydraulics Laboratory, with a Master's in Civil Engineering focusing on Hydraulic Resources. His research spans Dimensionless Hydrology, optimization for water allocation for urban and rural settings, flash flood prediction, developing early warning systems and models, and enhancing energy efficiency in water pressure systems.
+
+                </p>
+                
+            </div>
+        </div>
+        <div id="modal-humberto" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-humberto')">&times;</span>
+                <h2>Humberto Vergara</h2>
+                <img src="images/VergaraH.jpeg" alt="Gonzalo Alberto Forero Buitrago" height="250">
+                <p>
+                    Humberto Vergara is an Assistant Professor at the Civil and Environmental Engineering department and the IIHR – Hydroscience and Engineering institute of The University of Iowa. He brings expertise in hydrologic forecasting for real-time early warning operations to the project. During the 2018 – 2023 period, he was the lead developer of EF5 applications for the USNWS implementation and experimental systems in different regions of the world. He has been in charge of the configuration and implementation of numerous online forecasting systems, including ones that use GPM’s IMERG data and short-term forecasts from NWPs and nowcasting algorithms. He hasalso led numerous workshops in Colombia, Ecuador and Central America featuring the use of satellite-based observations for hydrologic modeling and forecasting.
+
+
+                </p>
+                
+            </div>
+        </div>
+        </div>
+        <div id="modal-jj" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-jj')">&times;</span>
+                <h2>Dr. Jonathan J. Gourley</h2>
+                <img src="images/JJ_Gourley.jpeg" alt="Dr. Jonathan J. Gourley" height="250">
+                <p>
+                    Dr. Jonathan J. Gourley is a Research Hydrometeorologist with the NOAA/National Severe Storms Laboratory and an Affiliate Associate Professor with the School of Meteorology and Civil Engineering departments at the University of Oklahoma. He received his B.S. (1996) and M.S. degrees (1998) in Meteorology and Ph.D. in Civil Engineering (2003) from the University of Oklahoma. From 2004-2005, he joined MétéoFrance in Paris, France for his post-doctoral studies where he focused on dual-polarization radar data quality and hydrometeor classification. He rejoined NSSL in 2006 as a federal employee. His primary research interests are in unique observations of stormscale hydrometeorological states and fluxes and development of models to forecast them. He manages an interdisciplinary team that is responsible for the research, development, and transition of the FLASH system to the U.S. National Weather Service for operational flash flood monitoring and prediction. Dr. Gourleyhas won the Department of Commerce Bronze and two Silver Medal Awards, the American Meteorological Society Journal of Hydrometeorology Editor’s Award, and NASA’s Group Achievement and Robert H. Goddard Team Awards for his contributions to the algorithms comprising the Global Precipitation Measurement mission. He has served as the chair of the AMSCommittee on Nationwide Network of Networks since 2020. Dr. Gourley is an Associate Editor for the American Geophysical Union’s Water Resources Research journal. He has published over 160 peer-reviewed journal articles achieving an h-index of 58 and he is the co-author of the Radar Hydrology textbook. 
+
+
+
+                </p>
+                
+            </div>
+        </div>
+        </div>
+        <div id="modal-malihe" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-malihe')">&times;</span>
+                <h2>Malihe Nasibi</h2>
+                <img src="images/Malihe.jpg" alt="Malihe Nasibi" height="250">
+                <p>
+                    Malihe is a Ph.D. student in the water resources program at George Mason University, working under the guidance of Dr. Maggioni. She received master’s degree in water resources engineering from PWUT, Tehran, Iran. Her research interests are rooted in water resources engineering, concentrating on hydrologic modeling, satellite-based remote sensing, extreme precipitation, and flood forecasting. Her current research focuses on the spatial patterns and temporal trends of extreme precipitation in West Africa.
+
+
+
+
+                </p>
+                
+            </div>
+        </div>
+        </div>
+        <div id="modal-vanessa" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-vanessa')">&times;</span>
+                <h2>Vanessa Robledo</h2>
+                <img src="images/Robledo_V_Picture.jpg" alt="Vanessa Robledo" height="250">
+                <p>
+                    Vanessa Robledo is an environmental engineer with a Master's degree in Environmental Engineering. Her professional expertise lies in the fields of hydrometeorology and climatology, with a specific focus on studying extreme precipitation events in tropical regions. Currently, she is pursuing a Ph.D., driven by a keen interest in exploring the role of extreme precipitation events in the occurrence of flash floods.
+
+
+
+
+                </p>
+                
+            </div>
+        </div>
+        <div id="modal-viviana" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-viviana')">&times;</span>
+                <h2>Viviana Maggioni</h2>
+                <img src="images/V_Maggioni_satellite1.jpg" alt="Viviana Maggioni" height="250">
+                <p>
+                    Viviana Maggioni, PhD. is Associate Professor of Environmental and Water Resources Engineering at George Mason University. Dr. Maggioni received her B.S. and M.S. degrees in Environmental Engineering from the Polytechnic University of Milan, Italy, in 2003 and 2006 respectively, and her Ph.D. degree in Environmental Engineering from the University of Connecticut, Storrs, in 2012. Her research interests lie at the intersection of hydrology and remote sensing. In particular, she is interested in the application of satellite remote sensing techniques to estimate and monitor hydrological variables at the local to global scale. Her work has direct applications in water resources management, weather and climate prediction, as well as agriculture and irrigation practices. Since 2010, she has published 67 peer-reviewed scientific articles, 5 book chapters, 3 scientific reports, and co-edited a book on Extreme Hydroclimatic Events and Multivariate Hazards in a Changing Climate (Elsevier, 2019). She is the Editor in Chief of the Journal of Hydrometeorology (American Meteorological Society Publications) and Associate Editor of Frontier in Climate – Climate Services. She currently serves as the Chair of the American Geophysical Union (AGU) Fall Meeting Program Committee for the Hydrology Section and as the Director of Undergraduate Affairs in her Department at Mason. She has served as one of the two co-chairs of the International Precipitation Working Group (IPWG) and the Chair of the AGU Technical Committee on Precipitation.
+
+
+
+
+                </p>
+                
+            </div>
+        </div>
+        </div>
+        <div id="modal-xi" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-xi')">&times;</span>
+                <h2>Xi Zhang</h2>
+                <img src="images/xi.jpg" alt="Xi Zhang" height="250">
+                <p>
+                    Xi Zhang is a PhD candidate at the Florida Institute of Technology. Her research interests include probabilistic modeling, statistical methods, ML/AI with applications in social media, cyber-security and the earth sciences. She received her M.S. in Electrical Engineering at Florida Institute of Technology, and she is currently a member of FIT’s Center for Advanced Data Analytics & Systems (CADAS).
+
+
+
+                </p>
+                
+            </div>
+        </div>
+
+
+
+        <!-- Footer -->
+        <footer id="copyright" style="text-align: center; padding: 20px; background-color: #f9f9f9;">
+            
+            
+            <!-- University Logos -->
+            <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 10px;">
+                <a href="https://servirglobal.net//" target="_blank">
+                    <img src="images/servir.png" alt="NASA SERVIR Logo" style="height: 70px;">
+                </a>
+                <!-- University 1 Logo -->
+                <a href="https://www.rutgers.edu/" target="_blank">
+                    <img src="images/Rutgers.png" alt="Rutgers University Logo" style="height: 70px;">
+                </a>
+                <!-- University 2 Logo -->
+                <a href="https://www.fit.edu/" target="_blank">
+                    <img src="images/Florida_Institute_of_Technology.jpg" alt="Florida Institute of Technology Logo" style="height: 70px;">
+                </a>
+                <!-- University 3 Logo -->
+                <a href="https://engineering.uiowa.edu/" target="_blank">
+                    <img src="images/University_of_Iowa_seal.jpeg" alt="University of Iowa Logo" style="height: 70px;">
+                </a>
+                <!-- University 4 Logo -->
+                <a href="https://www.gmu.edu/" target="_blank">
+                    <img src="images/gmu.jpeg" alt="George Mason University Logo" style="height: 70px;">
+                </a>
+                <a href="https://www.noaa.gov/" target="_blank">
+                    <img src="images/NOAA.jpeg" alt="NOAA Logo" style="height: 70px;">
+                </a>
+                
+            </div>
+            <p>&copy; FLOWARN-WA Project. All rights reserved. | Design by <a href="http://html5up.net">HTML5 UP</a>.</p>
+        </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Function to open a modal
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.style.display = "block"; // Show the modal
+            }
+        }
+    
+        // Function to close a modal
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.style.display = "none"; // Hide the modal
+            }
+        }
+    
+        // Add event listener to close the modal when clicking outside of it
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', function (event) {
+                if (event.target === this) { // Ensure the click is on the modal background
+                    closeModal(this.id);
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
